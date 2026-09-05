@@ -44,7 +44,7 @@ The project follows a straightforward **train → serialize → serve → predic
 
 ```mermaid
 flowchart TD
-    A[iris.csv<br/>Raw Dataset] --> B[model.py<br/>Load & Preprocess Data]
+    A[iris.csv<br/>Raw Dataset] --> B["model.py<br/>Load & Preprocess Data"]
     B --> C[Train/Test Split<br/>+ Feature Scaling]
     C --> D[RandomForestClassifier<br/>Training]
     D --> E[model.pkl<br/>Serialized Model]
@@ -55,7 +55,7 @@ flowchart TD
     H --> I[User Enters<br/>Sepal/Petal Measurements]
     I --> J["POST /predict<br/>Form Data Submitted"]
     J --> K[Convert Inputs to<br/>NumPy Array]
-    K --> L[model.predict&#40;&#41;]
+    K --> L["Run model.predict"]
     L --> M[Render index.html<br/>with Predicted Species]
 ```
 
